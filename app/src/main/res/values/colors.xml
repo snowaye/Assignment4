@@ -8,4 +8,6 @@
     <color name="colorNavIconLight">#cccccc</color>
     <color name="colorNavText">#9C27B0</color>
     <color name="colorNavTextLight">#cccccc</color>
+    <color name="colorToolbarTextColor">#9C27B0</color>
+    <color name="colorMainBackground">#fcf8fc</color>
 </resources>
