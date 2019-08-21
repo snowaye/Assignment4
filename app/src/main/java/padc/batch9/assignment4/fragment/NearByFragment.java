@@ -8,9 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class FragmentThree extends Fragment {
+public class NearByFragment extends Fragment {
 
-    public FragmentThree() {
+    public NearByFragment() {
     }
 
     @Nullable

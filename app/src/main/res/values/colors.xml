@@ -4,10 +4,12 @@
     <color name="colorPrimaryDark">#8E24AA</color>
     <color name="colorAccent">#FFFFFF</color>
 
+    <color name="statusBarColor">#FFFFFF</color>
     <color name="colorNavIcon">#9C27B0</color>
     <color name="colorNavIconLight">#cccccc</color>
     <color name="colorNavText">#9C27B0</color>
     <color name="colorNavTextLight">#cccccc</color>
     <color name="colorToolbarTextColor">#9C27B0</color>
     <color name="colorMainBackground">#fcf8fc</color>
+    <color name="tabTextColor">#333333</color>
 </resources>

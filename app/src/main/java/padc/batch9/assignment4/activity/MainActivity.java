@@ -1,4 +1,4 @@
-package padc.batch9.assignment4;
+package padc.batch9.assignment4.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
@@ -12,9 +12,10 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toolbar;
 
-import padc.batch9.assignment4.fragment.FragmentOne;
-import padc.batch9.assignment4.fragment.FragmentThree;
-import padc.batch9.assignment4.fragment.FragmentTwo;
+import padc.batch9.assignment4.R;
+import padc.batch9.assignment4.fragment.NearByFragment;
+import padc.batch9.assignment4.fragment.AllFragment;
+import padc.batch9.assignment4.fragment.PopularFragment;
 
 public class MainActivity extends AppCompatActivity {
     private TextView mTextMessage;
@@ -32,17 +33,17 @@ public class MainActivity extends AppCompatActivity {
             Fragment fragment;
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    fragment = new FragmentOne();
+                    fragment = new NearByFragment();
                     setTitle("Home");
                     loadFragment(fragment);
                     return true;
                 case R.id.navigation_dashboard:
-                    fragment = new FragmentTwo();
+                    fragment = new PopularFragment();
                     setTitle("Search");
                     loadFragment(fragment);
                     return true;
                 case R.id.navigation_notifications:
-                    fragment = new FragmentThree();
+                    fragment = new AllFragment();
                     setTitle("Time");
                     loadFragment(fragment);
                     return true;
