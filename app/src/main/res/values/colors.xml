@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#9C27B0</color>
-    <color name="colorPrimaryDark">#8E24AA</color>
+    <color name="colorPrimary">#A308FF</color>
+    <color name="colorPrimaryDark">#8206cc</color>
     <color name="colorAccent">#FFFFFF</color>
 
+
+    <color name="cardBackgroundColor">#FFFFFFFF</color>
     <color name="statusBarColor">#FFFFFF</color>
-    <color name="colorNavIcon">#9C27B0</color>
-    <color name="colorNavIconLight">#cccccc</color>
-    <color name="colorNavText">#9C27B0</color>
-    <color name="colorNavTextLight">#cccccc</color>
-    <color name="colorToolbarTextColor">#9C27B0</color>
-    <color name="colorMainBackground">#fcf8fc</color>
+    <color name="colorNavIcon">#A308FF</color>
+    <color name="colorNavIconLight">#f5e6ff</color>
+    <color name="colorNavText">#A308FF</color>
+    <color name="colorNavTextLight">#f5e6ff</color>
+    <color name="colorToolbarTextColor">#A308FF</color>
+    <color name="colorActivityBackground">#fcf8fc</color>
     <color name="tabTextColor">#333333</color>
+    <color name="tabTextColorLight">#cccccc</color>
+    <color name="iconRatingColor">#FFEB3B</color>
+    <color name="textColorWhite">#FFFFFF</color>
+    <color name="textColorMain">#333333</color>
+    <color name="textColorMainLight">#cccccc</color>
+    <color name="textColorPrimary">#A308FF</color>
+    <color name="textColorPrimaryLight">#eccdff</color>
+    <color name="textColorHighLight">#FF0293</color>
+
 </resources>

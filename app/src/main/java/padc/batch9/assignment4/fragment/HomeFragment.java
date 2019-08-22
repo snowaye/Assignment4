@@ -14,15 +14,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
+
 import padc.batch9.assignment4.R;
+import padc.batch9.assignment4.activity.MainActivity;
 import padc.batch9.assignment4.adapter.HomeFragmentPagerAdapter;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements TabLayout.BaseOnTabSelectedListener {
     private String tag = getClass().getSimpleName();
     TabLayout tabLayout;
     ViewPager viewPager;
     HomeFragmentPagerAdapter adapter;
-
+    AppCompatImageView imgvProfile;
     public HomeFragment() {
     }
 
@@ -35,29 +39,21 @@ public class HomeFragment extends Fragment {
         tabLayout.setupWithViewPager(viewPager);
         setupTabIcons();
         selectFirstTab();
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                selectTab(tab);
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-                unselectTab(tab);
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
+        tabLayout.addOnTabSelectedListener(this);
         return view;
     }
 
     private void initializeUiComponent(View view) {
         tabLayout = view.findViewById(R.id.tabLayout);
         viewPager = view.findViewById(R.id.viewpager);
-        viewPager.setOffscreenPageLimit(3);
+        viewPager.setSaveFromParentEnabled(false);
+        imgvProfile = view.findViewById(R.id.imgv_profile);
+        Glide.with(getContext())
+                .load(R.drawable.img_profile)
+                .apply(RequestOptions.circleCropTransform())
+                .placeholder(R.drawable.ic_default_user)
+                .error(R.drawable.ic_default_user)
+                .into(imgvProfile);
     }
 
     private void initializeData() {
@@ -65,13 +61,12 @@ public class HomeFragment extends Fragment {
     }
 
     private void setupViewPager(ViewPager viewPager) {
-        adapter = new HomeFragmentPagerAdapter(getFragmentManager());
-
+        adapter = new HomeFragmentPagerAdapter(getChildFragmentManager());
         adapter.addFragment(new NearByFragment(), "Nearby");
         adapter.addFragment(new PopularFragment(), "Popular");
         adapter.addFragment(new AllFragment(), "All");
-
         viewPager.setAdapter(adapter);
+        viewPager.setOffscreenPageLimit(2);
     }
 
     private void setupTabIcons() {
@@ -79,13 +74,14 @@ public class HomeFragment extends Fragment {
         AppCompatImageView imgvNearby =  viewNearby.findViewById(R.id.imgv_tab);
         AppCompatTextView tvNearby =  viewNearby.findViewById(R.id.tv_tab);
         tvNearby.setText("Nearby");
+        tvNearby.setTextColor(ContextCompat.getColor(getContext(), R.color.tabTextColor));
         imgvNearby.setImageResource(R.drawable.ic_tab);
         imgvNearby.setVisibility(View.VISIBLE);
 
         View viewPopular = LayoutInflater.from(getContext()).inflate(R.layout.tab_home, null);
         AppCompatImageView imgvPopular =  viewPopular.findViewById(R.id.imgv_tab);
         AppCompatTextView tvPopular =  viewPopular.findViewById(R.id.tv_tab);
-        tvPopular.setTextColor(ContextCompat.getColor(getContext(), R.color.colorNavTextLight));
+        tvPopular.setTextColor(ContextCompat.getColor(getContext(), R.color.tabTextColorLight));
         tvPopular.setText("Popular");
         imgvPopular.setVisibility(View.INVISIBLE);
 
@@ -93,7 +89,7 @@ public class HomeFragment extends Fragment {
         AppCompatImageView imgvAll = viewAll.findViewById(R.id.imgv_tab);
         AppCompatTextView tvAll =  viewAll.findViewById(R.id.tv_tab);
         tvAll.setText("All");
-        tvAll.setTextColor(ContextCompat.getColor(getContext(), R.color.colorNavTextLight));
+        tvAll.setTextColor(ContextCompat.getColor(getContext(), R.color.tabTextColorLight));
         imgvAll.setVisibility(View.INVISIBLE);
 
         tabLayout.getTabAt(0).setCustomView(viewNearby);
@@ -141,7 +137,7 @@ public class HomeFragment extends Fragment {
                 break;
         }
         tv.setText(text);
-        tv.setTextColor(ContextCompat.getColor(getContext(), R.color.tabTextColor));
+        tv.setTextColor(ContextCompat.getColor(getContext(), R.color.tabTextColorLight));
         imgeView.setVisibility(View.INVISIBLE);
     }
 
@@ -157,5 +153,20 @@ public class HomeFragment extends Fragment {
         tvTab.setText("Nearby");
         imgvTab.setImageResource(R.drawable.ic_tab);
         imgvTab.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void onTabSelected(TabLayout.Tab tab) {
+        selectTab(tab);
+    }
+
+    @Override
+    public void onTabUnselected(TabLayout.Tab tab) {
+        unselectTab(tab);
+    }
+
+    @Override
+    public void onTabReselected(TabLayout.Tab tab) {
+
     }
 }

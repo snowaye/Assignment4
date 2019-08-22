@@ -2,8 +2,8 @@
 <android.support.design.card.MaterialCardView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardUseCompatPadding="false"
-    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    app:contentPaddingBottom="@dimen/inner_margin"
+    android:layout_marginEnd="@dimen/activity_vertical_margin"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
@@ -17,21 +17,15 @@
             android:layout_marginBottom="@dimen/activity_vertical_margin">
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="match_parent"
                 app:cardElevation="0dp"
                 app:cardCornerRadius="@dimen/card_corner_radius">
                 <android.support.v7.widget.AppCompatImageView
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="match_parent"
                     app:srcCompat="@drawable/img_hotel"
                     android:scaleType="centerCrop" />
             </android.support.v7.widget.CardView>
-            <android.support.v7.widget.AppCompatImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_margin="@dimen/activity_vertical_margin"
-                android:layout_gravity="end|top"
-                app:srcCompat="@drawable/ic_bookmark_white"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -67,63 +61,31 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/activity_vertical_margin"
                 android:text="$89/day"
-                android:layout_gravity="bottom|end"
+                android:layout_gravity="top|end"
                 android:background="@drawable/bg_room_price"
                 android:padding="@dimen/h_layout_padding"
                 android:textSize="@dimen/text_size_body_small"
                 android:textColor="@color/textColorWhite"
                 android:textStyle="bold"/>
         </FrameLayout>
-        <LinearLayout
+        <android.support.v7.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginBottom="@dimen/inner_margin"
-            android:orientation="horizontal">
+            android:layout_marginEnd="@dimen/inner_margin"
+            android:text="Tulip Hotel"
+            android:gravity="start"
+            android:textColor="@color/textColorMain"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_title_h2"/>
+
             <android.support.v7.widget.AppCompatTextView
-                android:layout_width="0dp"
-                android:layout_weight="1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/inner_margin"
-                android:text="The Westeen"
-                android:gravity="start"
-                android:textColor="@color/textColorMain"
-                android:textStyle="bold"
-                android:textSize="@dimen/text_size_title_h1"/>
-            <android.support.v7.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/inner_margin"
-                android:text="Get 50% Off"
-                android:gravity="center"
-                android:textColor="@color/textColorHighLight"
-                android:textStyle="bold"
-                android:textSize="@dimen/text_size_body_small"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <android.support.v7.widget.AppCompatTextView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/inner_margin"
-                android:text="Gulshan Circle 2, Dhaka"
+                android:text="Coxbazar Chittagong"
                 android:gravity="start"
                 android:textColor="@color/textColorMainLight"
                 android:textStyle="bold"
                 android:textSize="@dimen/text_size_body_small"/>
-            <android.support.v7.widget.AppCompatTextView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/inner_margin"
-                android:text="Free Wifi * Swimming"
-                android:gravity="end"
-                android:textColor="@color/textColorMainLight"
-                android:textStyle="bold"
-                android:textSize="@dimen/text_size_body_small"/>
-        </LinearLayout>
     </LinearLayout>
 </android.support.design.card.MaterialCardView>

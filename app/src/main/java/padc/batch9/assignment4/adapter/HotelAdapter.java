@@ -25,6 +25,6 @@ public class HotelAdapter extends RecyclerView.Adapter<HotelViewHolder> {
 
     @Override
     public int getItemCount() {
-        return 80;
+        return 4;
     }
 }
