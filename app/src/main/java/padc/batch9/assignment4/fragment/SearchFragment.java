@@ -22,8 +22,6 @@ public class SearchFragment extends Fragment {
 
     RecyclerView recvTopSearch, recvRecentSearch;
     LinearLayoutManager managerTopSearch, managerRecentSearch;
-    private BottomSheetBehavior sheetBehavior;
-    private CardView bottom_sheet;
     Chip chipFilter;
 
 
@@ -38,37 +36,11 @@ public class SearchFragment extends Fragment {
         chipFilter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (sheetBehavior.getState() != BottomSheetBehavior.STATE_EXPANDED) {
-                    sheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
-                } else {
-                    sheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
-                }
+                FilterBottomSheetFragment bottomSheetFragment = new FilterBottomSheetFragment();
+                bottomSheetFragment.show(getChildFragmentManager(), bottomSheetFragment.getTag());
             }
         });
-        sheetBehavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
-            @Override
-            public void onStateChanged(@NonNull View view, int newState) {
-                switch (newState) {
-                    case BottomSheetBehavior.STATE_HIDDEN:
-                        break;
-                    case BottomSheetBehavior.STATE_EXPANDED: {
-                    }
-                    break;
-                    case BottomSheetBehavior.STATE_COLLAPSED: {
-                    }
-                    break;
-                    case BottomSheetBehavior.STATE_DRAGGING:
-                        break;
-                    case BottomSheetBehavior.STATE_SETTLING:
-                        break;
-                }
-            }
 
-            @Override
-            public void onSlide(@NonNull View view, float v) {
-
-            }
-        });
         return view;
     }
 
@@ -81,8 +53,6 @@ public class SearchFragment extends Fragment {
         recvRecentSearch.setLayoutManager(managerRecentSearch);
         recvTopSearch.setAdapter(new TopSearchHotelAdapter());
         recvRecentSearch.setAdapter(new TopSearchHotelAdapter());
-        bottom_sheet = view.findViewById(R.id.bottom_sheet);
-        sheetBehavior = BottomSheetBehavior.from(bottom_sheet);
         chipFilter = view.findViewById(R.id.chip_Filter);
     }
 }

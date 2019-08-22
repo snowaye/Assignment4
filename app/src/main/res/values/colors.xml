@@ -12,12 +12,12 @@
     <color name="colorNavText">#A308FF</color>
     <color name="colorNavTextLight">#f5e6ff</color>
     <color name="colorToolbarTextColor">#A308FF</color>
-    <color name="colorActivityBackground">#fcf8fc</color>
+    <color name="colorActivityBackground">#F5F5F5</color>
     <color name="tabTextColor">#333333</color>
     <color name="tabTextColorLight">#cccccc</color>
     <color name="iconRatingColor">#FFEB3B</color>
     <color name="textColorWhite">#FFFFFF</color>
-    <color name="textColorMain">#333333</color>
+    <color name="textColorMain">#b2b2b2</color>
     <color name="textColorMainLight">#cccccc</color>
     <color name="textColorPrimary">#A308FF</color>
     <color name="textColorPrimaryLight">#eccdff</color>

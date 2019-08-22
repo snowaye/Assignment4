@@ -13,4 +13,9 @@
         <item name="android:textColor">@color/text_color_chip_state_list</item>
     </style>
 
+    <style name="AppThemeTwo" parent="Theme.AppCompat.Light">
+        <item name="android:colorActivatedHighlight">@color/colorPrimary</item>
+        <item name="android:progressDrawable">@drawable/ic_progress</item>
+    </style>
+
 </resources>
