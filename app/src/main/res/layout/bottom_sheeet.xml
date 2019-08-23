@@ -26,7 +26,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/inner_margin"
-                android:text="Reset"
+                android:text="@string/btn_cancel"
                 android:textColor="@color/textColorPrimary"
                 android:textStyle="bold"
                 android:textSize="@dimen/text_size_body"/>
@@ -35,7 +35,7 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/inner_margin"
-                android:text="Filtered"
+                android:text="@string/label_title_Filter"
                 android:gravity="center"
                 android:textColor="@color/textColorMain"
                 android:textStyle="bold"
@@ -44,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/inner_margin"
-                android:text="Cancel"
+                android:text="@string/btn_reset"
                 android:textColor="@color/textColorPrimary"
                 android:textStyle="bold"
                 android:textSize="@dimen/text_size_body"/>
@@ -53,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/inner_margin"
-            android:text="Sort By"
+            android:text="@string/label_sort_by"
             android:gravity="start"
             android:textAllCaps="true"
             android:textColor="@color/textColorMain"
@@ -64,7 +64,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_large_margin"
             android:background="@drawable/bg_sort_by_price"
             android:padding="@dimen/activity_vertical_margin">
             <android.support.v7.widget.AppCompatTextView
@@ -72,7 +72,7 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/inner_margin"
-                android:text="Price"
+                android:text="@string/hint_text_price"
                 android:textColor="@color/textColorMainLight"
                 android:textStyle="normal"
                 android:textSize="@dimen/text_size_body"/>
@@ -81,7 +81,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginEnd="@dimen/inner_margin"
-                android:text="$$-$$$$"
+                android:text="@string/hint_text_price_range"
                 android:textColor="@color/textColorMainLight"
                 android:textStyle="bold"
                 android:textSize="@dimen/text_size_body"/>
@@ -94,7 +94,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/inner_margin"
-            android:text="Rating"
+            android:text="@string/label_rating"
             android:textAllCaps="true"
             android:gravity="start"
             android:textColor="@color/textColorMain"
@@ -103,55 +103,78 @@
         <android.support.design.chip.ChipGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/activity_horizontal_margin"
-            app:chipSpacing="@dimen/activity_horizontal_margin">
+            android:layout_marginBottom="@dimen/activity_large_margin"
+            app:singleSelection="true"
+            app:chipSpacing="@dimen/activity_vertical_margin">
             <android.support.design.chip.Chip
                 android:id="@+id/chip_none"
-
-                style="@style/CustomChipChoice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="None"
+                android:text="@string/chip_label_none"
+                android:clickable="true"
+                android:focusable="true"
+                app:chipStartPadding="@dimen/activity_vertical_margin"
+                app:chipEndPadding="@dimen/activity_vertical_margin"
+                style="@style/MyChipTheme"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
             <android.support.design.chip.Chip
                 android:id="@+id/chip_1star"
-                style="@style/CustomChipChoice"
+                style="@style/Widget.MaterialComponents.Chip.Action"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1"
+                android:text="@string/chip_label_1_star"
                 android:clickable="true"
+                app:chipBackgroundColor="@color/bg_chip_state_list"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
-                app:chipIcon="@drawable/ic_star_unpressed" />
+                app:chipIcon="@drawable/ic_star_unpressed"
+                app:chipStartPadding="@dimen/activity_vertical_margin"
+                app:chipEndPadding="@dimen/activity_vertical_margin"/>
             <android.support.design.chip.Chip
                 android:id="@+id/chip_2star"
-                style="@style/CustomChipChoice"
+                style="@style/Widget.MaterialComponents.Chip.Action"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2"
+                android:text="@string/chip_label_2_star"
+                app:chipStartPadding="@dimen/activity_vertical_margin"
+                app:chipEndPadding="@dimen/activity_vertical_margin"
+                android:clickable="true"
+                app:chipBackgroundColor="@color/bg_chip_state_list"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
                 app:chipIcon="@drawable/ic_star_unpressed" />
             <android.support.design.chip.Chip
                 android:id="@+id/chip_3star"
-                style="@style/CustomChipChoice"
+                style="@style/Widget.MaterialComponents.Chip.Action"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
-                android:text="3"
+                android:text="@string/chip_label_3_star"
+                app:chipStartPadding="@dimen/activity_vertical_margin"
+                app:chipEndPadding="@dimen/activity_vertical_margin"
+                app:chipBackgroundColor="@color/bg_chip_state_list"
+                android:clickable="true"
                 app:chipIcon="@drawable/ic_star_unpressed" />
             <android.support.design.chip.Chip
                 android:id="@+id/chip_4star"
-                style="@style/CustomChipChoice"
+                style="@style/Widget.MaterialComponents.Chip.Action"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="4"
+                android:text="@string/chip_label_4_star"
+                app:chipStartPadding="@dimen/activity_vertical_margin"
+                app:chipEndPadding="@dimen/activity_vertical_margin"
+                app:chipBackgroundColor="@color/bg_chip_state_list"
+                android:clickable="true"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
                 app:chipIcon="@drawable/ic_star_unpressed" />
             <android.support.design.chip.Chip
                 android:id="@+id/chip_5star"
-                style="@style/CustomChipChoice"
+                style="@style/Widget.MaterialComponents.Chip.Action"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5"
+                android:text="@string/chip_label_5_star"
+                app:chipStartPadding="@dimen/activity_vertical_margin"
+                app:chipEndPadding="@dimen/activity_vertical_margin"
+                app:chipBackgroundColor="@color/bg_chip_state_list"
+                android:clickable="true"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
                 app:chipIcon="@drawable/ic_star_unpressed" />
         </android.support.design.chip.ChipGroup>
@@ -159,7 +182,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/inner_margin"
-            android:text="Price Rangee"
+            android:text="@string/label_price_range"
             android:textAllCaps="true"
             android:gravity="start"
             android:textColor="@color/textColorMain"
@@ -168,7 +191,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/activity_horizontal_margin">
+            android:layout_marginBottom="@dimen/activity_large_margin">
             <android.support.v7.widget.AppCompatImageView
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
@@ -192,7 +215,7 @@
                     android:min="0"
                     android:max="350"
                     android:minHeight="8dp"
-                    android:progress="350"
+                    android:progress="300"
                     android:thumb="@drawable/ic_progress"
                     android:progressTint="@color/colorPrimary"/>
             </LinearLayout>
@@ -208,7 +231,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="$90-350"
+                android:text="@string/label_range"
                 android:gravity="start"
                 android:textColor="@color/textColorMain"
                 android:textStyle="bold"
@@ -217,7 +240,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="Average $250"
+                android:text="@string/label_average_value"
                 android:gravity="end"
                 android:textColor="@color/textColorMain"
                 android:textStyle="bold"
@@ -232,7 +255,7 @@
                 android:layout_width="0dp"
                 android:layout_height="36dp"
                 android:layout_weight="1"
-                android:text="Filter Now"
+                android:text="@string/btn_filter_now"
                 android:layout_marginEnd="@dimen/activity_vertical_margin"
                 android:textColor="@color/textColorWhite"
                 android:textSize="@dimen/text_size_body_small"

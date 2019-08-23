@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.card.MaterialCardView
+<android.support.v7.widget.CardView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardUseCompatPadding="false"
     android:paddingBottom="@dimen/activity_vertical_margin"
+    app:cardCornerRadius="0dp"
+    app:cardBackgroundColor="@color/cardBackgroundColor"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
@@ -49,7 +51,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/tv_rating"
                     android:layout_marginEnd="@dimen/inner_margin"
-                    android:text="4.5"
+                    android:text="@string/card_text_rating_values"
                     android:textColor="@color/textColorWhite"
                     android:textStyle="bold"
                     android:textSize="@dimen/text_size_body"/>
@@ -57,7 +59,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/tv_total_rating"
-                    android:text="(21 ratings)"
+                    android:text="@string/card_text_rating_total"
                     android:textColor="@color/textColorWhite"
                     android:textStyle="bold"
                     android:textSize="@dimen/text_size_body_small"/>
@@ -66,7 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/activity_vertical_margin"
-                android:text="$89/day"
+                android:text="@string/card_text_charges"
                 android:layout_gravity="bottom|end"
                 android:background="@drawable/bg_room_price"
                 android:padding="@dimen/h_layout_padding"
@@ -85,7 +87,7 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/inner_margin"
-                android:text="The Westeen"
+                android:text="@string/card_text_hotel_name"
                 android:gravity="start"
                 android:textColor="@color/textColorMain"
                 android:textStyle="bold"
@@ -94,7 +96,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/inner_margin"
-                android:text="Get 50% Off"
+                android:text="@string/card_text_hotel_discount"
                 android:gravity="center"
                 android:textColor="@color/textColorHighLight"
                 android:textStyle="bold"
@@ -109,7 +111,7 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/inner_margin"
-                android:text="Gulshan Circle 2, Dhaka"
+                android:text="@string/card_text_hotel_address"
                 android:gravity="start"
                 android:textColor="@color/textColorMainLight"
                 android:textStyle="bold"
@@ -119,11 +121,11 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/inner_margin"
-                android:text="Free Wifi * Swimming"
+                android:text="@string/card_text_hotel_facilities"
                 android:gravity="end"
                 android:textColor="@color/textColorMainLight"
                 android:textStyle="bold"
                 android:textSize="@dimen/text_size_body_small"/>
         </LinearLayout>
     </LinearLayout>
-</android.support.design.card.MaterialCardView>
+</android.support.v7.widget.CardView>

@@ -1,12 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center">
-    <android.support.v7.widget.AppCompatTextView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Search Hotels"
-        android:textSize="@dimen/text_size_body"
-        android:textColor="@color/textColorMainLight"/>
+        android:orientation="horizontal"
+        android:layout_gravity="top"
+        android:background="@color/textColorWhite"
+        android:padding="@dimen/activity_horizontal_margin">
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="@dimen/activity_vertical_margin"
+            app:srcCompat="@drawable/ic_bookmark_primary"/>
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/toolbar_title_save_hotel"
+            android:gravity="start|center"
+            android:textSize="@dimen/text_size_title_h2"
+            android:textStyle="normal"
+            android:textColor="@color/textColorMain"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            app:srcCompat="@drawable/ic_no_bookmark"/>
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_no_saved_hotel"
+            android:textSize="@dimen/text_size_body"
+            android:gravity="center"
+            android:textColor="@color/textColorPrimaryLight"/>
+    </LinearLayout>
+
 </LinearLayout>

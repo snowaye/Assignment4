@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.card.MaterialCardView
+<android.support.v7.widget.CardView
     android:layout_width="300dp"
     android:layout_height="wrap_content"
     app:cardUseCompatPadding="true"
@@ -42,7 +42,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/tv_rating"
                     android:layout_marginEnd="@dimen/inner_margin"
-                    android:text="4.5"
+                    android:text="@string/card_text_rating_values"
                     android:textColor="@color/textColorWhite"
                     android:textStyle="bold"
                     android:textSize="@dimen/text_size_body"/>
@@ -50,7 +50,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/tv_total_rating"
-                    android:text="(21 ratings)"
+                    android:text="@string/card_text_rating_total"
                     android:textColor="@color/textColorWhite"
                     android:textStyle="bold"
                     android:textSize="@dimen/text_size_body_small"/>
@@ -59,7 +59,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/activity_vertical_margin"
-                android:text="$89/day"
+                android:text="@string/card_text_charges"
                 android:layout_gravity="top|end"
                 android:background="@drawable/bg_room_price"
                 android:padding="@dimen/h_layout_padding"
@@ -71,7 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/inner_margin"
-            android:text="Tulip Hotel"
+            android:text="@string/card_text_hotel_name_tulip"
             android:gravity="start"
             android:textColor="@color/textColorMain"
             android:textStyle="bold"
@@ -81,10 +81,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/inner_margin"
-                android:text="Coxbazar Chittagong"
+                android:text="@string/card_text_hotel_tulip_address"
                 android:gravity="start"
                 android:textColor="@color/textColorMainLight"
                 android:textStyle="bold"
                 android:textSize="@dimen/text_size_body_small"/>
     </LinearLayout>
-</android.support.design.card.MaterialCardView>
+</android.support.v7.widget.CardView>
